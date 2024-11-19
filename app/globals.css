@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+.markdown-content {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.markdown-content p {
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  margin-top: 24px; /* Space above headings */
+  margin-bottom: 10px;
+}
+
+.markdown-content code {
+  background-color: #f0f0f0; /* Background color for code */
+  padding: 4px 8px; /* Padding inside code blocks */
+  border-radius: 4px; /* Rounded corners for code */
+  font-family: monospace; /* Monospace font for code */
+}
+
+.markdown-content pre {
+  background-color: #f0f0f0; /* Background color for preformatted blocks */
+  padding: 12px; /* Padding inside the block */
+  overflow-x: auto; /* Ensure horizontal scrolling for long code */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Highlight.js theme overrides if needed */
+.hljs {
+  padding: 10px;
+  background: #f0f0f0; /* Adjust if needed */
+  border-radius: 8px;
+  overflow-x: auto;
+}
